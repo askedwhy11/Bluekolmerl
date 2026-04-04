@@ -5,7 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Kolmer - Perfumería Natural & Salud Libre</title>
     <style>
-        body {font-family: Arial, sans-serif; background: #05050f; color: #e8e8ff; margin: 0; padding: 0; line-height: 1.7;}
+ <style>
+/* Bullets místicos mezcla violeta-naranja con glow */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+
+li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #c026d3;
+  font-size: 18px;
+  text-shadow: 0 0 10px #f97316;
+  animation: pulse 2s infinite alternate;
+}
+
+/* Botones con transparencia, mezcla de colores y brillo espiritual */
+.button, a.button {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(192, 38, 211, 0.78), rgba(249, 115, 22, 0.78));
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(192, 38, 211, 0.7), 0 0 30px rgba(249, 115, 22, 0.6);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+}
+
+.button:hover, a.button:hover {
+  background: linear-gradient(135deg, rgba(192, 38, 211, 0.95), rgba(249, 115, 22, 0.95));
+  box-shadow: 0 0 25px rgba(192, 38, 211, 0.9), 0 0 45px rgba(249, 115, 22, 0.85);
+  transform: translateY(-3px);
+}
+
+@keyframes pulse {
+  from { text-shadow: 0 0 6px #f97316; }
+  to   { text-shadow: 0 0 16px #f97316; }
+}
+</style>       body {font-family: Arial, sans-serif; background: #05050f; color: #e8e8ff; margin: 0; padding: 0; line-height: 1.7;}
         header {background: #0a0a1a; padding: 80px 20px; text-align: center; border-bottom: 1px solid #1f1f33;}
         h1 {color: #c0d0ff; margin: 0; font-size: 2.6em;}
         .subtitle {color: #a0b0ff; font-size: 1.15em; margin-top: 12px;}
