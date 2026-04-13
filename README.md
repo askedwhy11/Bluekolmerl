@@ -1,2 +1,2 @@
-# Bluekolmerl
+# Bluekolmer
 Personal and professional activities 
