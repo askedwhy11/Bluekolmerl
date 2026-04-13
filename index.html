@@ -1,111 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Kolmer - Perfumería Natural & Salud Libre</title>
-    <style>
- <style>
-/* Bullets místicos mezcla violeta-naranja con glow */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 8px;
-}
-
-li::before {
-  content: "●";
-  position: absolute;
-  left: 0;
-  color: #c026d3;
-  font-size: 18px;
-  text-shadow: 0 0 10px #f97316;
-  animation: pulse 2s infinite alternate;
-}
-
-/* Botones con transparencia, mezcla de colores y brillo espiritual */
-.button, a.button {
-  display: inline-block;
-  background: linear-gradient(135deg, rgba(192, 38, 211, 0.78), rgba(249, 115, 22, 0.78));
-  color: white;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 0 18px rgba(192, 38, 211, 0.7), 0 0 30px rgba(249, 115, 22, 0.6);
-  transition: all 0.4s ease;
-  backdrop-filter: blur(6px);
-}
-
-.button:hover, a.button:hover {
-  background: linear-gradient(135deg, rgba(192, 38, 211, 0.95), rgba(249, 115, 22, 0.95));
-  box-shadow: 0 0 25px rgba(192, 38, 211, 0.9), 0 0 45px rgba(249, 115, 22, 0.85);
-  transform: translateY(-3px);
-}
-
-@keyframes pulse {
-  from { text-shadow: 0 0 6px #f97316; }
-  to   { text-shadow: 0 0 16px #f97316; }
-}
-</style>       body {font-family: Arial, sans-serif; background: #05050f; color: #e8e8ff; margin: 0; padding: 0; line-height: 1.7;}
-        header {background: #0a0a1a; padding: 80px 20px; text-align: center; border-bottom: 1px solid #1f1f33;}
-        h1 {color: #c0d0ff; margin: 0; font-size: 2.6em;}
-        .subtitle {color: #a0b0ff; font-size: 1.15em; margin-top: 12px;}
-        .container {max-width: 900px; margin: 60px auto; padding: 0 20px;}
-        .bullet-list {font-size: 1.25em; line-height: 2.1; margin: 40px 0;}
-        .bullet-list li {margin-bottom: 20px;}
-        .btn-dorado {
-            display: inline-block; background: linear-gradient(135deg, #f5a623, #ff8c00); color: #0a0a14;
-            padding: 16px 36px; border-radius: 30px; text-decoration: none; font-weight: bold; 
-            margin: 12px 8px; box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
-        }
-        .btn-dorado:hover {transform: translateY(-3px);}
-        footer {text-align: center; padding: 50px 20px; background: #05050f; color: #777; font-size: 0.9em;}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fermentación Natural</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap');
+    
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a1f14;
+      color: #f5f0e6;
+    }
+    
+    .container {
+      width: 100%; max-width: 430px; margin: 0 auto; min-height: 100vh;
+      background: linear-gradient(rgba(10,31,20,0.88), rgba(10,31,20,0.95)), url('fondo.jpeg') center/cover no-repeat;
+      position: relative; display: flex; flex-direction: column; overflow: hidden;
+    }
+    
+    .header { padding: 25px 25px 15px; text-align: center; }
+    
+    .main-title {
+      font-family: 'Playfair Display', serif; font-size: 46px; font-weight: 700;
+      line-height: 1.05; color: #d4b88a; text-shadow: 0 3px 15px rgba(0,0,0,0.7); margin: 0;
+    }
+    
+    .hero { flex: 1; position: relative; padding: 0 25px 25px; display: flex; align-items: center; justify-content: center; }
+    
+    .yogurt-bg {
+      position: absolute; inset: 0;
+      background: url('yogurt.jpeg') center/cover no-repeat;
+      opacity: 0.78; z-index: 1;
+    }
+    
+    .author-box {
+      position: relative; z-index: 2; background: rgba(10,31,20,0.85);
+      padding: 20px 24px; border-radius: 24px; backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,184,138,0.38); display: flex; align-items: center; gap: 20px;
+    }
+    .author-box img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3px solid #d4b88a; }
+    .quote { font-style: italic; font-size: 16.5px; line-height: 1.4; color: #e8d9c0; margin: 0; }
+    
+    .content { padding: 0 28px 30px; position: relative; z-index: 2; }
+    .benefits { list-style: none; padding: 0; margin: 15px 0 35px; }
+    .benefits li { margin: 16px 0; padding-left: 32px; position: relative; font-size: 15.8px; color: #d4d0c7; }
+    .benefits li:before { content: '✧'; position: absolute; left: 0; color: #d4b88a; font-size: 19px; }
+    
+    /* Banner GIF burbujas */
+    .cta-banner {
+      margin: 15px 28px 45px; height: 130px;
+      background: linear-gradient(rgba(10,31,20,0.48), rgba(10,31,20,0.72)), url('burbujas.gif') center/cover no-repeat;
+      border-radius: 30px; position: relative; overflow: hidden; cursor: pointer;
+      box-shadow: 0 14px 45px rgba(212,184,138,0.52);
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      transition: all 0.4s ease;
+    }
+    .cta-banner:hover { transform: scale(1.025); }
+    
+    .cta-banner::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 40% 50%, rgba(255,235,170,0.45) 12%, transparent 60%);
+      animation: brilloEtereo 22s ease-in-out infinite alternate;
+      pointer-events: none; mix-blend-mode: screen; opacity: 0.75;
+    }
+    @keyframes brilloEtereo {
+      0% { opacity: 0.45; transform: scale(0.96); }
+      100% { opacity: 0.78; transform: scale(1.04); }
+    }
+    
+    .cta-text {
+      color: #fff; font-family: 'Playfair Display', serif; font-size: 19.8px; font-weight: 700;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.88); line-height: 1.22; z-index: 3; position: relative;
+    }
+    .cta-text span { display: block; font-size: 15.4px; font-weight: 400; margin-top: 6px; opacity: 0.96; }
+    
+    /* Ginkgo como lazo elegante al pie */
+    .ginkgos {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 92px;
+      background: url('hojas.jpeg') repeat-x bottom;
+      background-size: auto 100%;
+      opacity: 0.94;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .garabato {
+      position: absolute; 
+      bottom: 78px; 
+      left: 0; right: 0;
+      height: 60px;
+      background: url('garabato.png') center no-repeat;
+      background-size: contain;
+      opacity: 0.29;
+      z-index: 2;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-
-    <header>
-        <h1>Blue Kolmer</h1>
-        <p class="subtitle">Con blazer negro y pelo cobrizo, te acompaño hacia una perfumería y salud natural real. Confianza sin tóxicos.</p>
-    </header>
-
-    <div class="container">
-        <h2 style="text-align:center; color:#d0d8ff;">Lo que encontrarás aquí</h2>
-        
-        <ul class="bullet-list">
-            <li>✅ Recetas naturales para controlar la diabetes</li>
-            <li>✅ Fermentados vivos para tu salud intestinal</li>
-            <li>✅ Mis recetas exclusivas de perfumes naturales</li>
-            <li>✅ Vídeos promocionales y explicaciones</li>
-            <li>✅ Mi ebook completo de perfumería artesanal</li>
-            <li>✅ Productos recomendados en Amazon</li>
-            <li>✅ Atención personal por Telegram</li>
-        </ul>
-
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="recetas-perfumes.html" class="btn-dorado">→ Recetas de Perfumes Naturales</a><br>
-            <a href="videos.html" class="btn-dorado">→ Ver Vídeos Promocionales</a><br>
-            <a href="recetas-diabetes.html" class="btn-dorado">→ Recetas para Diabetes</a><br>
-            <a href="fermentados.html" class="btn-dorado">→ Recetas de Fermentados</a>
-        </div>
-
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="https://t.me/TU_USUARIO_TELEGRAM" class="btn-dorado" target="_blank" 
-               style="background:#1e88e5; box-shadow: 0 4px 15px rgba(30,136,229,0.4);">
-                ✉️ Pregúntame por Telegram
-            </a>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1 class="main-title">Fermentación Natural</h1>
     </div>
-
-    <footer>
-        © 2026 Blue Kolmer - Hecho con alma libre en la oscuridad ✨
-    </footer>
-
+    
+    <div class="hero">
+      <div class="yogurt-bg"></div>
+      <div class="author-box">
+        <img src="mifoto.jpeg" alt="Autora">
+        <p class="quote">"Fermentar es fácil y tu cuerpo lo nota"</p>
+      </div>
+    </div>
+    
+    <div class="content">
+      <ul class="benefits">
+        <li>Guía para elegir tu fermentadora ideal</li>
+        <li>La clave de tu energía diaria: salud intestinal y recetas vivas</li>
+        <li>Recetas de perfumes naturales sin tóxicos</li>
+      </ul>
+      
+      <div class="cta-banner" onclick="alert('¡Aquí iría el vídeo de la fermentadora viva! ✨')">
+        <div class="cta-text">
+          Mira cómo funciona<br>
+          <span>la fermentadora en un minuto</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="garabato"></div>
+    <div class="ginkgos"></div>
+  </div>
 </body>
 </html>
